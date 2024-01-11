@@ -7,7 +7,9 @@ class Rectangle(BaseGeometry):
     """
       defines a rectangle-child class of BaseGeometry-parent class
     """
-    super().integer_validator("width", width)
-    super().integer_validator("heigth", height)
-    self.__width = width
-    self.__height = height
+    def __init__(self, width, height):
+        ''' defines the init parameters of the Rectangle class '''
+        super().integer_validator("width", width)
+        super().integer_validator("heigth", height)
+        self.__width = width
+        self.__height = height
